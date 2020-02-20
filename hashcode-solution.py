@@ -16,7 +16,7 @@ class library:
            return bookId
         return -1
     def removeBook(self, bookId):
-        self.bList = [i for i in self.bList if i[0] == bookId]
+        self.bList = [i for i in self.bList if i[0] != bookId]
     
 
 #file1 = open('a_example.in', "r")
