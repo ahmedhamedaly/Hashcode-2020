@@ -10,7 +10,7 @@ class library:
         self.bList = bList
     
     def sortBooks(self, books):
-        return 0
+        self.bList.sort(key = lambda tuple : tuple[1])
     
     def containsBook(self, bookId):
         if(bList.contains(bookId)):
