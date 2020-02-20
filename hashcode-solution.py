@@ -27,24 +27,23 @@ def main():
             if index % 2 is 1:
                 print("hello")
 
+def sortBooks(books):
+     books.sort(key = lambda tuple : tuple[1], reverse = True)
 class library:
     def __init__(self, amount, sTime, bShip, bList):
+        sortBooks(bList)
         self.amount = amount
         self.sTime = sTime
-        self.bList = sortBooks(self, bList)
-        self.bShip = bShip
         self.bList = bList
-    
-    def sortBooks(self, books):
-        self.bList.sort(key = lambda tuple : tuple[1])
+        self.bShip = bShip
 
     def containsBook(self, bookId):
-        if(self.bList.contains(bookId)):
+        if(bList.contains(bookId)):
            return bookId
         return -1
     def removeBook(self, bookId):
         self.bList = [i for i in self.bList if i[0] != bookId]
-
+    
 def sortLibraries(libraries):
     libraries.sort(key=lambda lib: lib.sTime)
 
