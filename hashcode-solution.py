@@ -18,7 +18,9 @@ class library:
     def removeBook(self, bookId):
         self.bList = [i for i in self.bList if i[0] != bookId]
     
-
+def sortLibraries(libraries):
+    libraries.sort(key=lambda lib: lib.sTime)
+    
 #file1 = open('a_example.in', "r")
 
 print("hey")
