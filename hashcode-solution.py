@@ -11,7 +11,7 @@ def optLib(libraries,days,bookAmount):
         if (score > bestLib[1]):
             bestLib = (libraries.index(lib),score)
     return bestLib
-
+#
 
 
 
